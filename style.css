@@ -177,3 +177,26 @@ button#equal {
     background-color: #716529;
     color: #ffffff;
 }
+
+@media only screen and (max-width: 600px) {
+    .icons {
+        width: 90px;
+        height: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 6px;
+        border-radius: 9px;
+        box-shadow: 0 0 1rem #333 inset;
+        transition: all 0.2s ease;
+    }
+    .icons .fa-instagram {
+        color: #6e1c45;
+        margin-top: 00px;
+    }
+    
+}
