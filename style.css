@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom, #728510, #905b09, #8e322c, #6e1c45, #361d4d);
+}
+body::before {
+	content: '';
+	position: absolute;
+	display: block;
+	top: 0;
+	left: -172px;
+	width: 428px;
+	height: 643px;
+	clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+	box-shadow: 0 0 7rem #333 inset;
+}
+.icons {
+	width: 40px;
+	height: 70px;
+	position: fixed;
+	top: 136px;
+	right: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 6px;
+    border-radius: 9px;
+    box-shadow: 0 0 1rem #333 inset;
+    transition: all 0.2s ease;
+}
+.icons .fa {
+    font-size: 23px;
+}
+.icons .fa-facebook-official {
+    color: blue;
+}
+.icons .fa-facebook-official:hover {
+ transform: rotate(360deg);
+}
+.icons .fa-instagram {
+    color: #6e1c45;
+    margin-top: 10px;
+}
+.icons .fa-instagram:hover {
+    transform: rotate(360deg);
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid; 
+    place-items: center;
+    box-shadow: 0 0 7rem #333 inset;
+}
+.calculater  {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+.theme-toggler {
+	position: absolute;
+	top: 11px;
+	right: -3px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 1;
+}
+.theme-toggler.active {
+    color: #333;
+}
+.theme-toggler.active::before {
+    background-color: #fff;
+}
+.theme-toggler::before {
+    content: '';
+    height: 17px;
+    width: 17px;
+    position: relative;
+    display: block;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: -1;
+}
+#display {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+}
+#display::-webkit-scrollbar {
+    display: block;
+    height: 3px;
+}
+button {
+    height: 50px;
+    width: 50px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    transition: all 200ms ease;
+}
+button:hover {
+    transform: scale(1.1);
+}
+button#equal {
+    height: 110px;
+}
+
+
+/* light theme  */
+.calculater {
+    background-color: #fff;
+    box-shadow: 0 0 7rem #333 inset;
+}
+.calculater #display {
+    color: #0a1e23;
+}
+.calculater button#clear {
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+.calculater button.btn-number {
+    background-color: #c3eaff;
+    color: #000;
+}
+.calculater button.button-oparetor {
+    background-color: #ffd0fd;
+    color: #f967f3;
+}
+.calculater button.btn-equal {
+    background-color: #abe655;
+    color: #000;
+}
+
+/* dark theme  */
+.calculater.dark {
+    background-color: #071115;
+    box-shadow: 0px 0 2rem rgb(89, 82, 82) inset;
+}
+.calculater.dark #display {
+    color: #f8fafd;
+}
+.calculater.dark button#clear {
+    background-color: #2d191e;
+    color: #bd3740;
+}
+.calculater.dark button.btn-number {
+    background-color: #1b2f38;
+    color: #f8fafb;
+}
+.calculater.dark button.button-oparetor {
+    background-color: #2e1f39;
+    color: #aa00a4;
+}
+.calculater.dark button.btn-equal {
+    background-color: #716529;
+    color: #ffffff;
+}
