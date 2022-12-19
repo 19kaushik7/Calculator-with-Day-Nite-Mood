@@ -21,7 +21,7 @@ buttonEl.forEach((item) => {
         else {
             displayEl.innerHTML += item.id;
             if (displayEl.innerHTML.length > 12) {
-                alert('You Put Too Many Numbers!');
+                alert('Too Many Number Can't Display!');
                 displayEl.innerHTML = "";
             }
         }
